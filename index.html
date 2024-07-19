@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Final Project</title>
+    <script type="module" src="connected-scatterplot.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button type="button" onclick="openPage()">Open Overview</button><br/><br/>
+    <input type="file" name="csvFile" id="csvFile" accept=".csv">
+    <div class="range-class">
+        <label for="start-year">Start year: </label> <span id="start-year-value">5</span>
+        <div class="range-container">
+            <span class="year-min">0</span>
+            <input type="range" class="input-year" id="start-year" name="start-year" min="0" max="10" />
+            <span class="year-max">10</span>
+        </div>
+    </div>
+    <div class="range-class">
+        <label for="end-year">End year: </label><span id="end-year-value">5</span>
+        <div class="range-container">
+            <span class="year-min">0</span>
+            <input type="range" class="input-year" id="end-year" name="end-year" min="0" max="10"/>
+            <span class="year-max">10</span>
+        </div>
+    </div>
+
+    <div id="dropdown-container">
+        <label for="xaxis-dropdown">X-axis : 
+            <select name="xaxis-dropdown" id="xaxis-dropdown">
+                
+            </select>
+        </label>
+        <label for="yaxis-dropdown">Y-axis : 
+            <select name="yaxis-dropdown" id="yaxis-dropdown">
+                
+            </select>
+        </label>
+        <label for="hue-dropdown">Hue : 
+            <select name="hue-dropdown" id="hue-dropdown">
+
+            </select>
+        </label>
+    </div>
+
+    <div id="graph-container"></div>
+</body>
+</html>
